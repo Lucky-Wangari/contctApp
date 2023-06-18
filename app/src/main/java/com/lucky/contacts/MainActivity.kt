@@ -1,5 +1,6 @@
 package com.lucky.contacts
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,6 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.btnfloat.setOnClickListener {
+            val intent = Intent(this,Activity2::class.java)
+            startActivity(intent)
+
+        }
     }
 
     override fun onResume() {
